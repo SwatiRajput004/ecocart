@@ -1,0 +1,72 @@
+root {
+    --eco-green: #2ecc71;
+    --eco-dark: #27ae60;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    background-color: #f8f9fa;
+  }
+  .eco-badge {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+  .product-card {
+    margin-bottom: 20px;
+  }
+  .alternative {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .eco-score {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .eco-score-A {
+    background-color: #27ae60;
+  }
+  
+  .eco-score-B {
+    background-color: #2ecc71;
+  }
+  
+  .eco-score-C {
+    background-color: #f1c40f;
+  }
+  
+  .product-card {
+    transition: transform 0.3s ease;
+    height: 100%;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .sustainability-features {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .product-image {
+    height: 200px;
+    object-fit: cover;
+  }
