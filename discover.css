@@ -6,6 +6,7 @@ root {
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.5;
+      background: url("background1.jpg") no-repeat center center fixed;
     background-color: #f8f9fa;
   }
   .eco-badge {
