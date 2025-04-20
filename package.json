@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "axios": "^1.8.3",
+    "firebase": "^11.6.0",
+    "firebase-admin": "^13.2.0"
+  },
+  "name": "konic",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Swati Rajput",
+  "license": "ISC",
+  "description": "\"A library for managing and displaying product images with features like resizing and lazy loading.\",",
+  "repository": {
+    "type": "git",
+    "url": "repository.json"
+  }
+}

@@ -1,0 +1,36 @@
+"repository" :
+  {
+    "name": "product-image1",
+    "type": "git",
+    "url": "appliences.jpeg"
+  },
+ "related-repositories": [
+    {
+    
+    "name": "product-image2",
+    "type": "git",
+    "url": "brand.jpeg"
+  }
+  {
+    "name": "product-image3",
+    "type": "git",
+    "url": "ecofriend.jpeg"
+  }
+  {
+    "name": "product-image4",
+    "type": "git",
+    "url": "electric.jpeg"
+  }
+  {
+    "name": "product-image5",
+    "type": "git",
+    "url": "jugs.jpeg"
+  }
+  {
+    "name": "product-image6",
+    "type": "git",
+    "url": "kitchen.jpeg"
+  }
+
+  
+]
