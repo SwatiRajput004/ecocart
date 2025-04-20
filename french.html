@@ -1,0 +1,348 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCart - Shopping Durable</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-leaf"></i>EcoCart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="discover.html">Évaluations Éco</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="main-navigation">
+                            <ul>
+                                <li>
+                                    <a href="#" class="brand-ratings-link" style="color:white">Évaluations de Marque</a>
+                                    <div class="brand-ratings-dropdown">
+                                        <div class="column">
+                                            <ul>
+                                                <li><a href="#"><a  href="tops.html">Hauts</a></a></li>
+                                                <li><a href="#"><a href="bottoms.html">Bas</a></a></li>
+                                                <li><a href="#">Chaussures</a></li>
+                                                <li><a href="#">Accessoires</a></li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><a href="#">Robes & Combinaisons</a></li>
+                                                <li><a href="#">Basiques & Sous-vêtements</a></li>
+                                                <li><a href="#">Denim</a></li>
+                                                <li><a href="#">Vêtements d'extérieur</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><a href="#">Maquillage Visage</a></li>
+                                                <li><a href="#">Maquillage Yeux</a></li>
+                                                <li><a href="#">Maquillage Lèvres</a></li>
+                                                <li><a href="#">Ongles</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><a href="#">Soins de la peau</a></li>
+                                                <li><a href="#">Solaire & Bronzage</a></li>
+                                                <li><a href="#">Soins des cheveux</a></li>
+                                                <li><a href="#">Bain & Corps</a></li>
+                                                <li><a href="#">Voir toute la beauté >></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const brandRatingsLink = document.querySelector('.brand-ratings-link');
+        const brandRatingsDropdown = document.querySelector('.brand-ratings-dropdown');
+    
+        brandRatingsLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Empêche le comportement par défaut du lien (naviguer vers une nouvelle page)
+            brandRatingsDropdown.style.display = brandRatingsDropdown.style.display === 'block' ? 'none' : 'flex';
+        });
+    
+        // Fermer le menu déroulant si l'utilisateur clique à l'extérieur
+        document.addEventListener('click', (event) => {
+            if (!brandRatingsLink.contains(event.target) && !brandRatingsDropdown.contains(event.target)) {
+                brandRatingsDropdown.style.display = 'none';
+            }
+        });
+    </script>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link cart-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-counter" class="d-none">0</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link wishlist-link" href="#" data-bs-toggle="modal" data-bs-target="#wishlistModal">
+            <i class="fas fa-heart"></i>
+            <span id="wishlist-counter" class="d-none">0</span>
+        </a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    
+    <!-- Section Héros -->
+    <section style="background-color: #0fad5e" class="hero">
+        <div style="background-color: Emerald" class="container">
+            <h1>Faites vos achats de manière durable avec EcoCart</h1>
+            <p>Trouvez des produits écologiques et découvrez des alternatives plus vertes à vos articles préférés</p>
+            <div class="search-form">
+                <form id="search-form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search-input" placeholder="Recherchez des produits (essayez 'bouteille d'eau', 'jeans' ou 'café')">
+                        <button class="btn btn-success" type="submit">
+                            <i class="fas fa-search"></i> Rechercher
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Fonctionnalités -->
+    <section class="features bg-white" id="about">
+        <div style="background-color: #BCB;" class="container">
+            <div class="row mb-5">
+                <div class="col-md-12 text-center">
+                    <h2 class="mb-4">Pourquoi choisir EcoCart ?</h2>
+                    <p class="lead">Nous vous aidons à faire des choix d’achat plus respectueux de l’environnement.</p>
+                </div>
+            </div>
+            <div style="background-color:#BCB" class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <div style="background-color:rgb(238, 61, 21)" class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Évaluations Écologiques</h3>
+                        <p>Nous évaluons les produits en fonction de leur impact environnemental, des matériaux utilisés aux pratiques de fabrication.</p>
+                        <a href="#eco-ratings" class="btn btn-sm btn-outline-success mt-3">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <div style="background-color:rgb(238, 61, 21)" class="feature-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h3>Alternatives Durables</h3>
+                        <p>Découvrez des alternatives plus écologiques aux produits conventionnels pour réduire votre empreinte écologique.</p>
+                        <a href="#" class="btn btn-sm btn-outline-success mt-3" onclick="filterProducts('sustainable')">Voir les alternatives</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <div style="background-color:rgb(238, 61, 21)" class="feature-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Éthique des Marques</h3>
+                        <p>Apprenez-en plus sur les politiques des entreprises, les conditions de travail et leur engagement en faveur de la durabilité.</p>
+                        <a href="#brand-ethics" class="btn btn-sm btn-outline-success mt-3">Voir l'éthique des marques</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Produits en Vedette -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-12 text-center">
+                <h2>Produits Éco-Responsables Populaires</h2>
+                <p>Les produits durables les mieux notés, adorés par nos utilisateurs</p>
+            </div>
+        </div>
+        <div class="row" id="featured-products">
+            <!-- Sera rempli avec JavaScript -->
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <a class="nav-link" href="discover.html">Évaluations Éco</a>
+                <a class="nav-link" href="images.html">
+                    <button class="btn btn-success" onclick="filterProducts('')">Voir Tous les Produits</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Guide des Évaluations Éco -->
+<section class="eco-rating-guide" id="eco-ratings">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12 text-center">
+                <h2 class="mb-4">Notre Système d'Évaluation Éco-Responsable</h2>
+                <p class="lead">Comment nous évaluons et notons les produits selon leur impact environnemental</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="rating-level rating-a p-4">
+                    <h3>A - Excellent</h3>
+                    <p>Produits avec un impact environnemental minimal tout au long de leur cycle de vie :</p>
+                    <ul>
+                        <li>Matériaux durables, renouvelables ou recyclés</li>
+                        <li>Processus de production sans déchets ou à faible impact</li>
+                        <li>Recyclable, biodégradable ou compostable</li>
+                        <li>Production neutre ou négative en carbone</li>
+                        <li>Sans produits chimiques ou toxines nocifs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="rating-level rating-b p-4">
+                    <h3>B - Bon</h3>
+                    <p>Produits avec des caractéristiques environnementales supérieures à la moyenne :</p>
+                    <ul>
+                        <li>Composés en grande partie de matériaux durables (plus de 50%)</li>
+                        <li>Réduction des déchets pendant la production</li>
+                        <li>Empreinte carbone inférieure à celle des alternatives conventionnelles</li>
+                        <li>Utilisation limitée de produits chimiques avec contrôle environnemental</li>
+                        <li>Conçus pour être durables</li>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="rating-level rating-c p-4">
+                        <h3>C - Moyen</h3>
+                        <p>Produits avec certaines caractéristiques durables :</p>
+                        <ul>
+                            <li>Certains matériaux durables (25 à 50%)</li>
+                            <li>Pratiques environnementales standards de l'industrie</li>
+                            <li>Partiellement recyclables</li>
+                            <li>Efforts partiels pour réduire l’impact environnemental</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="rating-level rating-d p-4">
+                        <h3>D - En dessous de la moyenne</h3>
+                        <p>Produits avec peu de caractéristiques durables :</p>
+                        <ul>
+                            <li>Principalement fabriqués à partir de matériaux conventionnels</li>
+                            <li>Recyclabilité ou réutilisabilité limitée</li>
+                            <li>Consommation de ressources élevée</li>
+                            <li>Production de déchets importante</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="rating-level rating-f p-4">
+                        <h3>F - Médiocre</h3>
+                        <p>Produits avec des impacts environnementaux significatifs :</p>
+                        <ul>
+                            <li>Matériaux non renouvelables et non recyclés</li>
+                            <li>Conception jetable ou à usage unique</li>
+                            <li>Contient des produits chimiques ou toxines nocifs</li>
+                            <li>Non recyclables ou difficilement recyclables</li>
+                            <li>Forte empreinte carbone</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Notre Processus d'Évaluation</h4>
+                            <p>Chaque produit est évalué de manière approfondie selon cinq catégories clés de durabilité :</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><strong>Matériaux & Ressources :</strong> Composition du produit et origine des matériaux</li>
+                                        <li><strong>Impact de Fabrication :</strong> Utilisation d’énergie, émissions et déchets générés</li>
+                                        <li><strong>Emballage :</strong> Durabilité de l’emballage</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><strong>Utilisation & Durabilité :</strong> Durée de vie du produit et impact lors de l'utilisation</li>
+                                        <li><strong>Fin de Vie :</strong> Sort du produit après usage (recyclabilité, biodégradabilité)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="mt-3">Notre équipe d’experts en durabilité effectue des recherches approfondies sur chaque produit, en consultant les fabricants, en vérifiant les certifications tierces et en analysant les bilans de cycle de vie disponibles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="background-color:#E195AB;" class="row mt-4">
+        <div style="background-color:#FFCCE1;" class="col-md-12">
+            <div class="card">
+                <div style="background-color: #F2F9FF;" class="card-body">
+                    <h4 style="background-color: #FFCCE1;">Certifications Éthiques Reconnues</h4>
+                    <div style="background-color:#E195AB;" class="row">
+                        <div class="col-md-3 mb-3">
+                            <h5>Social & Travail</h5>
+                            <ul>
+                                <li>Fair Trade Certified</li>
+                                <li>B Corporation</li>
+                                <li>SA8000</li>
+                                <li>WRAP Certification</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <h5>Environnemental</h5>
+                            <ul>
+                                <li>GOTS (Global Organic Textile Standard)</li>
+                                <li>Rainforest Alliance</li>
+                                <li>Carbon Trust Standard</li>
+                                <li>Energy Star</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <h5>Produit Spécifique</h5>
+                            <ul>
+                                <li>USDA Organic</li>
+                                <li>FSC (Forest Stewardship Council)</li>
+                                <li>MSC (Marine Stewardship Council)</li>
+                                <li>Leaping Bunny (Sans cruauté)</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <h5>Complet</h5>
+                            <ul>
+                                <li>Cradle to Cradle</li>
+                                <li>EcoVadis</li>
+                                <li>Certification LEED</li>
+                                <li>Green Seal</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-center">Cliquez sur une marque dans nos listes de produits pour voir son profil éthique détaillé et la vérification de ses certifications.</p>
+                </div>
+            </div>
+        </div>
+    </div>            
+    
